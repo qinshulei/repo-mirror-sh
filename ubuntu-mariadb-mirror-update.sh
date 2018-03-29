@@ -72,7 +72,7 @@ sync_mirror_with_version ()
 }
 
 
-sync_mirror_with_version 10.0 
-sync_mirror_with_version 10.1 
+sync_mirror_with_version 10.0
+sync_mirror_with_version 10.1
 
 #### End script to automate building of Ubuntu mirror ####
