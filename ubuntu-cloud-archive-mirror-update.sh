@@ -45,7 +45,7 @@ proto=http
 # Outpath=              # Directory to store the mirror in
 # Make this a full path to where you want to mirror the material.
 #
-outPath=/opt/repo-liuxl/repos/ubuntu-cloud-archive
+outPath=/home/repos/ubuntu-cloud-archive
 
 # The --nosource option only downloads debs and not deb-src's
 # The --progress option shows files as they are downloaded

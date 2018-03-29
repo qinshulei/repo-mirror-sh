@@ -46,7 +46,7 @@ proto=http
 # Outpath=              # Directory to store the mirror in
 # Make this a full path to where you want to mirror the material.
 #
-outPath=/opt/repo-liuxl/repos/debian-security
+outPath=/home/repos/debian-security
 
 # The --nosource option only downloads debs and not deb-src's
 # The --progress option shows files as they are downloaded
@@ -54,17 +54,17 @@ outPath=/opt/repo-liuxl/repos/debian-security
 # --nocleanup  Do not clean up the local mirror after mirroring is complete. Use this option to keep older repository
 # Start script
 #
-#               remove  --no-source 2017/11/28 \
+#               remove  --no-source 2017/11/28
 debmirror       -a $arch \
                 -s $section \
                 -h $server \
                 -d $release \
                 -r $inPath \
                 --method=$proto \
-		--progress --nosource \
-		--proxy=http://192.168.1.108:8900 \
+		            --progress --nosource \
+		            --proxy=http://192.168.1.108:8900 \
                 $outPath
-                #--rsync-extra=none \
+#--rsync-extra=none
 
 
 #### End script to automate building of Ubuntu mirror ####

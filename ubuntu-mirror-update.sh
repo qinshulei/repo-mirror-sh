@@ -47,7 +47,7 @@ proto=rsync
 # Outpath=              # Directory to store the mirror in
 # Make this a full path to where you want to mirror the material.
 #
-outPath=/opt/repo-liuxl/repos/ubuntu-ports
+outPath=/home/repos/ubuntu-ports
 
 # The --nosource option only downloads debs and not deb-src's
 # The --progress option shows files as they are downloaded
@@ -62,8 +62,8 @@ debmirror       -a $arch \
                 -r $inPath \
                 --progress \
                 --method=$proto \
-		--rsync-extra=${EXTRA} \
-		--di-dist=${DI_DIST} \
+		            --rsync-extra=${EXTRA} \
+		            --di-dist=${DI_DIST} \
                 $outPath
 
 

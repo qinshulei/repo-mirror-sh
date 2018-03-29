@@ -54,21 +54,21 @@ proto=http
 #
 sync_mirror_with_version ()
 {
-	version=$1
-	inPath=/repo/${version}/ubuntu
-	outPath=/opt/repo-liuxl/repos/ubuntu-mariadb/${version}
+	  version=$1
+	  inPath=/repo/${version}/ubuntu
+	  outPath=/home/repos/ubuntu-mariadb/${version}
 
-	echo "version: $version outPath: $outPath"
-	debmirror       -a $arch \
-			--no-source \
-			-s $section \
-			-h $server \
-			-d $release \
-			-r $inPath \
-			--progress \
-			--method=$proto \
-			--rsync-extra=none \
-			$outPath
+	  echo "version: $version outPath: $outPath"
+	  debmirror       -a $arch \
+			              --no-source \
+			              -s $section \
+			              -h $server \
+			              -d $release \
+			              -r $inPath \
+			              --progress \
+			              --method=$proto \
+			              --rsync-extra=none \
+			              $outPath
 }
 
 

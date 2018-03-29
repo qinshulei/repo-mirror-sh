@@ -54,21 +54,21 @@ proto=http
 #
 sync_mirror_with_version ()
 {
-	version=$1
-	inPath=/${version}
-	outPath=/opt/repo-liuxl/repos/ceph-deb-$(echo ${version} | awk -F '-' '{print $2}')
+	  version=$1
+	  inPath=/${version}
+	  outPath=/home/repos/ceph-deb-$(echo ${version} | awk -F '-' '{print $2}')
 
-	echo "version: $version outPath: $outPath"
-	debmirror       -a $arch \
-			--no-source \
-			-s $section \
-			-h $server \
-			-d $release \
-			-r $inPath \
-			--progress \
-			--method=$proto \
-			--rsync-extra=none \
-			$outPath
+	  echo "version: $version outPath: $outPath"
+	  debmirror       -a $arch \
+			              --no-source \
+			              -s $section \
+			              -h $server \
+			              -d $release \
+			              -r $inPath \
+			              --progress \
+			              --method=$proto \
+			              --rsync-extra=none \
+			              $outPath
 }
 
 

@@ -54,21 +54,21 @@ proto=http
 #
 sync_mirror_with_version ()
 {
-	version=$1
-	inPath=/debian/${version}
-	outPath=/opt/repo-liuxl/repos/erp/${version}
+	  version=$1
+	  inPath=/debian/${version}
+	  outPath=/home/repos/erp/${version}
 
-	echo "version: $version outPath: $outPath"
-	debmirror       -a $arch \
-			--no-source \
-			-s $section \
-			-h $server \
-			-d $release \
-			-r $inPath \
-			--progress \
-			--method=$proto \
-			--rsync-extra=none \
-			$outPath
+	  echo "version: $version outPath: $outPath"
+	  debmirror       -a $arch \
+			              --no-source \
+			              -s $section \
+			              -h $server \
+			              -d $release \
+			              -r $inPath \
+			              --progress \
+			              --method=$proto \
+			              --rsync-extra=none \
+			              $outPath
 }
 
 
